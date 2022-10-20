@@ -1,15 +1,11 @@
 package org.example;
 
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
-import static org.example.Util.Result.*;
 
 
 public class Main {
@@ -25,7 +21,6 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
         boolean continuePlaying = false;
-        String computerWord = Util.getRandomWord();
 
 
         while (!continuePlaying) {
@@ -55,7 +50,7 @@ public class Main {
 
             for (int i = 0; i < userGuess.length(); i++) {
                 char userLetter = userGuess.charAt(i);
-                char computerLetter = computerWord.charAt(i);
+                char computerLetter = ANSWER.charAt(i);
                 if (userLetter == computerLetter) {
                     greenIndices.add(i);
                     possibleYellowUserIndices.remove(Integer.valueOf(i));
@@ -68,11 +63,11 @@ public class Main {
                     continue;
                 }
                 char userLetter = userGuess.charAt(userIndex);
-                for (int computerIndex = 0; computerIndex < computerWord.length(); computerIndex++) {
+                for (int computerIndex = 0; computerIndex < ANSWER.length(); computerIndex++) {
                     if (doNotCheckAgainComputerIndices.contains(computerIndex)) {
                         continue;
                     }
-                    char computerLetter = computerWord.charAt(computerIndex);
+                    char computerLetter = ANSWER.charAt(computerIndex);
                     if (computerLetter == userLetter) {
                         yellowIndices.add(userIndex);
                         doNotCheckAgainComputerIndices.add(computerIndex);
@@ -96,7 +91,7 @@ public class Main {
             System.out.println();
 
 
-            if (userGuess.equals(computerWord)) {
+            if (userGuess.equals(ANSWER)) {
                 System.out.println("Congratulations!! You guessed the word :) ");
                 continuePlaying = true;
             } else if (guessCount >= 6) {
