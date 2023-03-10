@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>AI Therapist</title>
+        <title>Start Session</title>
         <link rel="icon" href="/logo.png" />
       </Head>
 
