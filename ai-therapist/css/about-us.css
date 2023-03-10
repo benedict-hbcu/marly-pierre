@@ -1,0 +1,163 @@
+/*-- Body Reset --*/
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: #616971;
+  }
+  
+  
+  /*============= TOP BAR HEADER =============*/
+  .top-bar {
+    background: #222222;
+    height: 2.8rem;
+    padding: .5rem 0;
+  }
+  .top-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 7.1px;
+  }
+  
+  
+  /*============= NAVIGATION =============*/
+    .navbar-brand img {
+    height: 7rem!important;
+  }
+  
+  .navbar {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+    z-index: 1;
+  }
+  .nav-link {
+    padding: .5rem;
+  }
+  .nav-link{
+    color: #5b5555!important;
+  }
+  
+  .nav-link.active,
+  .nav-link:hover {
+    color: #4981b3!important;
+  }
+
+  /* about us 
+.about-us {
+  text-align: center;
+  
+}
+/*.floated {
+  /*display: inline-block;
+  float: left;
+  width: 50%;
+} 
+
+
+#headshot{
+  height:50%;
+  width: 50%;
+  margin: auto;
+  /*float: left;
+  padding: 15px;
+  
+}
+
+#location {
+  height: 35%;
+  width: 35%;
+  margin: auto;
+  
+} */
+
+/*--ABOUT US--*/ 
+
+.contain{
+    text-align: center;
+    background: #fff;
+  }
+  
+  .header{
+    padding-top: 60px;
+    color: #444;
+    font-size: 20px;
+    margin: auto;
+    line-height: 50px;
+    text-align: center;
+  }
+  
+  .sub-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .teams{
+    margin: 10px;
+    padding: 22px;
+    max-width: 30%;
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+  }
+  
+  .teams:hover{
+    background: #ddd;
+    border-radius: 12px;
+  }
+  
+  .teams img{
+    width: 200px;
+    height: 200px;
+  }
+  
+  .name{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .desig{
+    font-style: italic;
+    color: #888;
+  }
+  
+  .summary{
+    margin: 20px 0;
+    font-weight: lighter;
+    color: #4e4e4e;
+  }
+  
+  .social-links {
+    margin: 14px;
+    
+  }
+  
+  .social-links a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transition: .4s;
+    color: black;
+  }
+  
+  .social-links a :hover{
+    transform: scale(1.5);
+    
+  }
+  
+  .social-links a i{
+    color: #444;
+  }
+  
+  @media screen and (max-width: 600px){
+    .teams{
+      max-width: 100%;
+    }
+  }
+  
