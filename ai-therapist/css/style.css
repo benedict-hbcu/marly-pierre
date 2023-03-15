@@ -81,7 +81,7 @@ body {
   text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 1) ;
 }
 .border-primary {
-  border-top: .2rem solid #4981b3!important;
+  border-top: .2rem solid #292b2c!important;
 }
 .carousel-caption h3 {
   font-size: 2.2rem;
@@ -94,12 +94,16 @@ body {
   border-width: medium;
 }
 .btn-danger {
-  background-color: #AC2615;
-  border: .05rem solid #AC2615;
+  background-color: #575757;
+  border: .05rem solid #575757;
+}
+.btn-dangers {
+  background-color: #a7d6ee;
+  border: .05rem solid #a7d6ee;
 }
 .btn-primary {
-  background-color: #4981b2;
-  border: .05rem solid #4981b2;
+  background-color: #c3bdd1;
+  border: .05rem solid #c3bdd1;
 }
 .btn-primary:hover 
 .btn-primary:focus{

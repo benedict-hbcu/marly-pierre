@@ -1,7 +1,6 @@
 @font-face {
   font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
-      format("woff2"),
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
     url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
@@ -13,6 +12,7 @@
   font-weight: bold;
   font-style: normal;
 }
+
 .main,
 .main input {
   font-size: 16px;
@@ -20,15 +20,27 @@
   color: #353740;
   font-family: "ColfaxAI", Helvetica, sans-serif;
 }
+
+.mains {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  background-image: linear-gradient(to right, #f3e77e 0%, #a59a3c 51%, #292b2c 100%);
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
+  background-image: linear-gradient(to right, #f3e77e 0%, #a59a3c 51%, #292b2c 100%);
 }
+
 .main .icon {
   width: 34px;
 }
+
 .main h3 {
   font-size: 32px;
   line-height: 40px;
@@ -36,11 +48,13 @@
   color: #202123;
   margin: 16px 0 40px;
 }
+
 .main form {
   display: flex;
   flex-direction: column;
   width: 320px;
 }
+
 .main input[type="text"] {
   padding: 12px 16px;
   border: 1px solid #f6d365;
@@ -48,20 +62,55 @@
   margin-bottom: 24px;
   outline-color: #f6d365;
 }
+
 .main ::placeholder {
   color: #8e8ea0;
   opacity: 1;
 }
+
 .main input[type="submit"] {
   padding: 12px 0;
   color: #fff;
-  background-image: linear-gradient(to right, #f3e77e 0%, #a59a3c 51%, #292b2c 100%);
   border: none;
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
 }
-.main .result {
-  font-weight: bold;
-  margin-top: 40px;
+
+/* Styles for chat container */
+.chatContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+
+/* Styles for user chat bubble */
+.chatBubbleUser {
+  background-color: #77bee2;
+  color: #1d3557;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 70%;
+  margin-bottom: 10px;
+  text-align: right !important;
+  word-wrap: break-word;
+  display: inline-block;
+
+}
+
+/* Styles for AI chat bubble */
+.chatBubbleAi {
+  background-color: #c8cabc;
+  color: #1d3557;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 70%;
+  margin-bottom: 10px;
+  text-align: left;
+  word-wrap: break-word;
+  
 }

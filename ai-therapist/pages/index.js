@@ -5,6 +5,7 @@ import styles from "./index.module.css";
 export default function Home() {
   const [sessionInput, setSessionInput] = useState("");
   const [result, setResult] = useState();
+  const [chatHistory, setChatHistory] = useState([]);
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -22,25 +23,28 @@ export default function Home() {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
 
+      // Add user's statement and AI's response to the chat history array
+      setChatHistory([...chatHistory, { user: sessionInput, ai: data.result }]);
       setResult(data.result);
       setSessionInput("");
+      console.log(chatHistory.length)
     } catch(error) {
-      // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
     }
   }
 
+
   return (
     <div>
       <Head>
-        <title>Start Session</title>
+        <title><i>Start Session</i></title>
         <link rel="icon" href="/logo.png" />
       </Head>
 
       <main className={styles.main}>
         <img src="/logo1.png" />
-        <h3>Start Session</h3>
+        <h3><i>Start Session</i></h3>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -49,10 +53,16 @@ export default function Home() {
             value={sessionInput}
             onChange={(e) => setSessionInput(e.target.value)}
           />
-          <input type="submit" value="Talk to me !" />
         </form>
-        <div className={styles.result}>{result}</div>
+        <div className={styles.chatContainer}>
+          {chatHistory.map((chat, index) => (
+            <div key={index}>
+              <div className={styles.chatBubbleUser}>{chat.user}</div>
+              <div className={styles.chatBubbleAi}>{chat.ai}</div>
+            </div>
+          ))}
+        </div>    
       </main>
-    </div>
+    </div >
   );
 }

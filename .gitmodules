@@ -1,0 +1,3 @@
+[submodule "ai-therapist/ai-therapist/shanera-marly-spring-project"]
+	path = ai-therapist/ai-therapist/shanera-marly-spring-project
+	url = https://github.com/benedict-hbcu/shanera-marly-spring-project.git

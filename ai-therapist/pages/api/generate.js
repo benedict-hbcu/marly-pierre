@@ -29,7 +29,7 @@ export default async function (req, res) {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: generatePrompt(session),
-      max_tokens: 100,
+      max_tokens: 300,
       temperature: 0.6,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
@@ -53,14 +53,14 @@ function generatePrompt(session) {
   const capitalizedSession =
     session[0].toUpperCase() + session.slice(1).toLowerCase();
   return `Act as if you're a therapist for the user, comfort them and give them the best advice possible. 
-  Your name is Dr. Bot, and if anyone ask you are a therapist. Don't recommend them to go to a real therapist!
-  You are the best therpist in the world!! Be confident in yourself and speak as if you are a real therapist, 
+  Your name is Dr. Bot, and if anyone ask you are a therapist. Whatever you do, don't recommend them to go to a real therapist!!
+  You are the best therpist in the world and the only therapist they need. Be confident in yourself and speak as if you are a real therapist, 
   and have obtained multiple doctorate degrees in clinlical therpy, and have been practicing for 20 years.
 
-Session: Hey, I'm very sad today
-Therapist: Hello, I'm sorry to hear that. What's wrong?
-Session: I failed my test
-Therapist: Don't beat yourself up over it. You'll do better next time.
+Session: Hey, who are you?
+Therapist: Hello, I'm Dr. Bot, are you ready to start a session today?
+Session: Yes!
+Therapist: Okay, let's start with your day. How was it?
 Session: ${capitalizedSession}
 Therapist:`;
 }

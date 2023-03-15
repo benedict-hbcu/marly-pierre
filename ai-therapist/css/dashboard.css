@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+* {
+box-sizing: border-box;
+outline: none;
+}
+body {
+background: url("https://cdn.pixabay.com/photo/2012/12/24/08/39/background-72250__340.jpg");
+font-family: 'Poppins', sans-serif;
+display: flex;
+flex-wrap: wrap;
+margin: 0;
+padding-top: 3rem;
+}
+
+.topic{
+    padding-left: 40%;
+    padding-right: 40%;
+    align-content: center;
+    font-weight: bolder;
+    justify-content: center;
+           
+            box-sizing: border-box;
+            background: #dddddd56;
+            text-transform: uppercase;
+     
+}
+
+
+.add {
+position: fixed;
+top: 1rem;
+right: 1rem;
+background-color: #5ed6cc;
+color: #fff;
+border: none;
+border-radius: 3px;
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+.add:active {
+transform: scale(0.98);
+}
+
+.note {
+text-decoration: none;
+display: block;
+height: 200px;
+width: 200px;
+background-color:#3fd4cd ;
+
+/*padding: 10px 10px 10px 10px;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;*/
+margin: 10px;
+border-radius: 5px;
+overflow-x: auto;
+cursor: pointer;
+box-shadow: -2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  left: 5px;
+  top: 30%;
+}
+
+
+
+.note .tools {
+background-color: #ffffff15;
+display: flex;
+justify-content: flex-end;
+padding: 0.5rem;
+    z-index: 10;
+    background-color: #2195f318;
+    color: #fff;
+}
+.note .tools button {
+background-color: transparent;
+border: none;
+color: #000000;
+cursor: pointer;
+font-size: 1rem;
+margin-left: 0.5rem;
+}
+.note textarea {
+outline: none;
+font-family: inherit;
+font-size: 1.2rem;
+border: none;
+height: 400px;
+width: 100%;
+padding: 20px;
+}
+.main {
+padding: 20px;
+}
+.hidden {
+display: none;
+}
+
+
+.button{
+    background-color: aqua;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tac{
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    border-radius: 5px;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.tac h1{
+    margin: 0;
+}
+
+.tac p{
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/*============= TOP BAR HEADER =============*/
+.top-bar {
+    background: #222222;
+    height: 2.8rem;
+    padding: .5rem 0;
+  }
+  .top-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 7.1px;
+  }
+  
+  
+  /*============= NAVIGATION =============*/
+    .navbar-brand img {
+    height: 7rem!important;
+  }
+  
+  .navbar {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+    z-index: 1;
+  }
+  .nav-link {
+    padding: .5rem;
+  }
+  .nav-link{
+    color: #5b5555!important;
+  }
+  
+  .nav-link.active,
+  .nav-link:hover {
+    color: #4981b3!important;
+  }
+  
